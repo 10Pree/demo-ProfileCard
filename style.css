@@ -4,10 +4,90 @@
     padding: 0;
 }
 :root{
-    --bg-color: #FFFFFF;
-    --text-color: #FF6666;
+    --bg-color: ##F4F4F9;
+    --text-color: 255, 102, 102, 0.5;
     --label-color: #011c27;
     --supinfo-color: #7C8483;
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     --bg-slide: #050505;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+}
+
+.container-profile{
+    display: flex;
+    width: 70%;
+    background-color: var(--bg-color);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.profile-line{
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    gap: 20px;
+}
+.img-profile img{
+    width: 250px;
+    height: 330px;
+    border-radius: 8px;
+}
+.double-line{
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: var(--supinfo-color);
+}
+.double-line::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1px;
+    background: var(--supinfo-color);
+}
+.heading-with-line{
+    display: flex;
+    align-items: center;
+    color: var(--supinfo-color);
+    font-size: .8rem;
+}
+.heading-with-line .sub-topic{
+    margin-right: 10px;
+}
+.heading-with-line .line{
+    flex: 1;
+}
+.profile-education{
+
+}
+.profile-education h3{
+    font-size: 1rem;
+    color: var(--label-color);
+    margin-bottom: 10px;
+}
+.profile-education p{
+    font-size: .8rem;
+    color: var(--supinfo-color);
+}
+.profile-skills{
+
+}
+.profile-skills ul{
+    list-style-type: none;
+}
+.profile-skills ul li{
+    color: var(--supinfo-color);
+}
+.profile-skills ul li span{
+    background-color: rgba(var(--text-color));
+    color:#ffff;
+    padding: 3px;
+    border-radius: 8px;
+    font-size: 0.8rem;
 }
