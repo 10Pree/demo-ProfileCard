@@ -93,13 +93,17 @@
         </div>
       </article>
       <article class="profile-info__section">
-        <div class="timeline-info">
+        <div class="tab">
+          <button class="tab-btn active" data-tab="timeline">TimeLine</button>
+          <button class="tab-btn" data-tab="about">About</button>
+        </div>
+        <div class="tab-content active" id="timeline">
           <span>TimeLine</span>
           <article>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis esse maxime explicabo labore excepturi consectetur, ipsam at sed ratione officiis? Expedita numquam corrupti laudantium, nisi iusto vitae tenetur aperiam labore?
           </article>
         </div>
-        <div class="about-info">
+        <div class="tab-content" id="about">
           <span>CONTACT INFORMATION</span>
           <div class="contact-info">
             <div class="contact-list">
@@ -133,6 +137,7 @@
       </article>
     </section>
   </main>
+  <script src="app.js"></script>
 </body>
 
 </html>

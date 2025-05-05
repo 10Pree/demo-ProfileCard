@@ -5,9 +5,10 @@
 }
 :root{
     --bg-color: ##F4F4F9;
-    --text-color: 255, 102, 102, 0.5;
-    --label-color: #011c27;
-    --supinfo-color: #7C8483;
+    --bg-skills-color: 1, 186, 239, 0.3;
+    --text-skills-color: #01baef ;
+    --text-color: #0B032D;
+    --supinfo-color: #626267;
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     --bg-slide: #050505;
 }
@@ -17,7 +18,7 @@ body{
     align-items: center;
     height: 100vh;  
 }
-
+/* page 1 */
 .container-profile{
     display: flex;
     width: 70%;
@@ -28,13 +29,16 @@ body{
 }
 .profile-line{
     display: flex;
-    width: 30%;
+    width: 250px;
     flex-direction: column;
     gap: 20px;
 }
-.img-profile img{
+.img-profile {
     width: 250px;
     height: 330px;
+}
+.img-profile img{
+    width: 100%;
     border-radius: 8px;
 }
 .double-line{
@@ -68,7 +72,7 @@ body{
 }
 .profile-education h3{
     font-size: 1rem;
-    color: var(--label-color);
+    color: var(--text-color);
     margin-bottom: 10px;
 }
 .profile-education p{
@@ -82,12 +86,23 @@ body{
     list-style-type: none;
 }
 .profile-skills ul li{
-    color: var(--supinfo-color);
+    color: var(--text-color);
+    margin-bottom: 10px;
 }
 .profile-skills ul li span{
-    background-color: rgba(var(--text-color));
-    color:#ffff;
+    background-color: rgba(var(--bg-skills-color));
+    color: var(--text-skills-color);
     padding: 3px;
+    margin-left: 10px;
     border-radius: 8px;
     font-size: 0.8rem;
+}
+
+/* page 2 */
+
+.tab-content{
+    display: none;
+}
+.tab-content.active{
+    display: block;
 }
