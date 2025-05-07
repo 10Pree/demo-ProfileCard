@@ -179,7 +179,6 @@ body{
 }
 .tab-content.active{
     display: block;
-
 }
 .tab-content.title{
     display: block;
