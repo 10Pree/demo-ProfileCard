@@ -188,9 +188,58 @@ body{
     margin: 20px 0px;
     color: var(--supinfo-color);
 }
-.contact-timeline{
-
+/* timeline Start */
+.timeline{
+    position: relative;
+    margin-left: 50px;
 }
+.timeline::before{
+    content: "";
+    position: absolute;    
+    left: -30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--supinfo-color);
+}
+.timeline ul{
+    list-style-type: none;
+}
+.timeline-point{
+    width: 24px;
+    height: 24px;
+    background-color: var(--btn-tab);
+    border-radius: 100%;
+    position: absolute;
+    left: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timeline-itme{
+    margin-bottom: 20px;
+}
+.timeline-point i{
+    color: white;
+    font-size: 0.8rem;
+}
+.content-timeline{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.title-timeline{
+    display: flex;
+    justify-content:space-between;
+}
+.time{
+    text-align: end;
+    color: var(--supinfo-color);
+}
+
+/* timeline End */
+
+/* contact info Start */
 .contact-info tr{
     display: block;
     margin: 10px 0px;   
@@ -198,6 +247,8 @@ body{
 .sub-title{
     width: 100px;
 }
+/* contact info End */
+
 /* End teb */
 
 
