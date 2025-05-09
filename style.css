@@ -18,29 +18,30 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;  
+    margin-top: 50px;
 }
 /* page 1 Start*/
 .container-profile{
     display: flex;
-    width: 70%;
+    flex-wrap: nowrap;
+    max-width: 1000px;
     background-color: var(--bg-color);
     border-radius: 16px;
     padding: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 .profile-line{
+    flex: 1 1 250px;
     display: flex;
-    width: 250px;
     flex-direction: column;
     gap: 20px;
 }
 .img-profile {
-    width: 250px;
-    height: 330px;
+    width: 100%;
+    height: auto;
 }
 .img-profile img{
-    width: 100%;
+    max-width: 250px;
     border-radius: 8px;
 }
 .double-line{
@@ -103,6 +104,7 @@ body{
 
 /* page 2 Start*/
 .profile-info{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -202,9 +204,6 @@ body{
     width: 2px;
     background: var(--supinfo-color);
 }
-.timeline ul{
-    list-style-type: none;
-}
 .timeline-point{
     width: 24px;
     height: 24px;
@@ -227,10 +226,14 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    color: var(--supinfo-color);
 }
 .title-timeline{
     display: flex;
     justify-content:space-between;
+}
+.title-timeline strong{
+    color: var(--text-color);
 }
 .time{
     text-align: end;
@@ -254,3 +257,21 @@ body{
 
 
 /* page 2 End*/
+
+ /* screen mobile Start */
+@media (max-width: 768px) {
+    .container-profile{
+        flex-wrap: wrap;
+    }
+    .profile-line{
+        margin-bottom: 20px;
+    }
+    .img-profile{
+        display: flex;
+        justify-content: center;
+    }
+    .profile-info{
+        margin: 0;
+    }
+}
+ /* screen mobile End */
