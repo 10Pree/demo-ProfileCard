@@ -14,3 +14,17 @@ document.addEventListener("DOMContentLoaded", function(){
         })
     })
 })
+
+const btnpopup = document.getElementById("btn-popup");
+const popup = document.getElementById("display-popup");
+const btnclose = document.querySelector('.close');
+
+
+btnpopup.onclick = () =>{
+    popup.style.display = 'block'
+}
+
+btnclose.onclick = () => {
+    popup.style.display = 'none'
+}
+
