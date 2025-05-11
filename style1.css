@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --bg-page1-color: 0, 5, 0;
+    --circle-color: 254, 249, 255;
+
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.page1{
+    width: 100%;
+    min-height: 100vh;
+    background-color: aqua;
+}
+.page1 img{
+    width: 100px;
+    position: fixed;
+}
+.page2{
+    width: 100%;
+    min-height: 100vh;
+    background-color:  black;
+}

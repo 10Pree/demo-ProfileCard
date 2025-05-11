@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- video ต้องมี attribute muted และ playsinline เพื่อให้เล่นอัตโนมัติบนมือถือ -->
+  <video id="scrollVideo" muted playsinline preload="auto" width="600">
+    <source src="/video/v1.mp4" type="video/mp4">
+    เบราว์เซอร์ของคุณไม่รองรับแท็กวิดีโอ
+  </video>
+
+  <!-- เนื้อหาอื่น ๆ เพื่อให้หน้าเพจมีความสูง -->
+  <div style="height:3000px;"></div>
+  
+</body>
+<style>
+    #scrollVideo {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;       /* ปรับขนาดตามต้องการ */
+  max-width: 800px;
+  z-index: 1000;
+}
+
+</style>
+
+<script>
+  const video = document.getElementById('scrollVideo');
+
+  // รอให้เมตาดาต้าวิดีโอโหลดจบ (เพื่อใช้งาน duration ได้)
+  video.addEventListener('loadedmetadata', () => {
+
+    // คำนวณความสูงเลื่อนสูงสุด
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const videoDuration = video.duration;
+
+    function syncVideo() {
+      const scrollY = window.scrollY;
+      const scrollFraction = Math.min(scrollY / maxScroll, 1);
+      // ตั้งเวลาเล่นวิดีโอตามสัดส่วน
+      video.currentTime = scrollFraction * videoDuration;
+    }
+
+    // ฟังอีเวนต์ scroll พร้อมใช้ requestAnimationFrame  
+    window.addEventListener('scroll', () => {
+      window.requestAnimationFrame(syncVideo);
+    });
+
+    // เริ่มหยุดที่เวลา 0 (เพื่อป้องกันเล่นอัตโนมัติครบรอบ)
+    syncVideo();
+  });
+</script>
+
+
+</html>
